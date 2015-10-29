@@ -20,6 +20,8 @@ from scipy.stats import ttest_ind , kruskal , pearsonr
 
 
 def clean_txt(txt, lang='en'):			
+	if lang=='es': 
+		for e,s in [("á",'a'),("é",'e'),("í",'i'),("ó",'o'),("ú",'u'),("ñ",'n')]: txt= txt.replace(e,s)
 	txt = re.sub("[^\w ]+"," ",txt.lower().strip())
 	return txt
 

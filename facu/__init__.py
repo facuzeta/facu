@@ -17,7 +17,7 @@ import json
 from gensim.matutils import unitvec
 from scipy.stats import ttest_ind , kruskal , pearsonr
 
-
+def python_header(): return "# -*- coding: utf-8 -*-"
 
 def clean_txt(txt, lang='en'):			
 	if lang=='es': 
